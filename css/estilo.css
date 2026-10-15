@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primario: #c9a24d;
+    --color-acento: #e3c27a;
+    --color-fondo: #f4f4f4;
+    --color-texto: #222222;
+    --color-blanco: #dfd6d6;
+    --color-oscuro: #242323;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+ body {
+    background-color: var(--color-fondo);
+    width: 100%;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color-oscuro);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(66, 63, 63, 0.2);
+}
+
+main {
+    width: 100%;
+}
+
+
+article.card {
+    background-color: #eae1e1;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+article.card h2 {
+    color: #c9a24d;
+    text-align: center;
+}
+
+.imgcard {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+    mix-blend-mode: multiply;
+}
+
+
+.botonh {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    min-width: 40px;
+    height: 24px;
+    padding: 2px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.botonh .barra {
+    display: block;
+    background-color: #c9a24d;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+} 
+
+.logo,
+.logo img {
+    width: auto;
+    height: 100px;
+}
+
+.menu1 ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu1 ul li {
+    text-align: center;
+    margin: 10px;
+}
+
+.menu1 a {
+    color: var(--color-primario);
+    text-decoration: none;
+    display: block;
+    padding: 8px 18px;
+    border: 1px solid var(--color-primario);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.menu1 a:hover {
+    background-color: var(--color-primario);
+    color: var(--color-oscuro);
+}
+
+/* menu oculto en el celular */
+.contenedormenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-oscuro);
+    z-index: 10;
+}
+
+/* menu visible al tocar las rayitas */
+.contenedormenu.activo {
+    display: block;
+}
+
+/* computador: menu en fila y sin rayitas */
+@media (min-width: 768px) {
+    .botonh {
+        display: none;
+    }
+
+    .contenedormenu {
+        display: block;
+        position: static;
+        width: auto;
+    }
+
+    .menu1 ul {
+        flex-direction: row;
+    }
+}
+
+footer {
+    background-color: var(--color-oscuro);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.logo-footer {
+    height: 60px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.eslogan {
+    color: var(--color-primario);
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-info {
+    flex: 1 1 280px;
+    text-align: left;
+}
+
+.footer-info h3 {
+    color: var(--color-primario);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.footer-info p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-info strong {
+    display: block;
+    color: var(--color-primario);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+.footer-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    color: var(--color-acento);
+}
+
+.mapa {
+    flex: 1 1 300px;
+    max-width: 420px;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 250px;
+    border: 2px solid var(--color-primario);
+    border-radius: 10px;
+}
+
+.derechos {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    font-size: 13px;
+    color: #999;
+}
+
+/* en el celular la información también va centrada */
+@media (max-width: 767px) {
+    .footer-info {
+        text-align: center;
+    }
+}
+
+.ima_banner {
+    background: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #0000005c;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+}
+
+
+/* ===== TEXTO DEL BANNER ===== */
+
+.banner-texto {
+    max-width: 450px;
+    margin-left: 5%;
+    padding: 30px;
+    background-color: rgba(28, 28, 28, 0.75);
+    border-left: 4px solid var(--color-primario);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.banner-texto h1 {
+    color: var(--color-primario);
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.banner-texto p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.boton-banner {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--color-primario);
+    color: var(--color-oscuro);
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton-banner:hover {
+    background-color: var(--color-acento);
+}
+
+/* en el celular la caja ocupa casi todo el ancho */
+@media (max-width: 767px) {
+    .banner-texto {
+        margin: 0 15px;
+        padding: 20px;
+    }
+
+    .banner-texto h1 {
+        font-size: 24px;
+    }
+
+    .banner-texto p {
+        font-size: 14px;
+    }
+}
+
+/* ===== CATALOGO EN CUADRICULA ===== */
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px 0;
+}
+
+/* ===== EFECTO AL PASAR EL MOUSE POR LOS CARROS ===== */
+
+.catalogo .imgcard {
+    transition: transform 0.3s ease;
+}
+
+.catalogo .card:hover .imgcard {
+    transform: scale(1.1);
+}
+
+.catalogo .card {
+    transition: box-shadow 0.3s ease;
+}
+
+.catalogo .card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
