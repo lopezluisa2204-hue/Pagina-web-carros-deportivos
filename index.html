@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagina web Luisa</title>
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap" rel="stylesheet">
+</head>
+
+
+<!---contenido que se va a ver en la web--->
+
+    <body>
+
+<!---Encabezado: donde va el logo y el menu--->
+<header>
+
+    <div class="logo"><img src="img/logo-ok.png" alt="Logotipo"></div>
+
+    <!---Botón Hamburguesa--->
+    <button class="botonh" aria-label="Abrir menu" aria-expanded="false">
+
+    <span class="barra"></span>
+    <span class="barra"></span>
+    <span class="barra"></span> 
+
+    </button>
+
+    <div class="contenedormenu">
+
+     <nav class="menu1">
+        <ul> 
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#catalogo">Catalogo</a></li>
+            <li><a href="#contacto">Contactanos</a></li>
+        </ul>
+    </nav>
+
+    </div>
+
+</header>
+
+
+<!---contenido principal--->
+<main>
+    <section>
+        <figure class="ima_banner">
+        <div class="banner">
+            <h1 id="inicio">Bienvenidos</h1>
+        </div>
+        </figure>
+    </section>
+            
+        </div>
+    </section>
+    <section id="catalogo"> 
+
+        <article class="card">
+            <img src="img/01.png" alt="Carro 1" class="imgcard">
+            <h2>Chevrolet Camaro</h2>
+            <p>$310.000.000 COP</p>
+        </article>
+            
+        <article class="card">
+            <img src="img/02.png" alt="Carro 2" class="imgcard">
+            <h2>Lamborghini Huracan</h2>
+            <p>$1.500.000.000 COP</p>
+        </article>
+
+    </section>
+
+</main>
+
+<!---pie de pagina e información de contacto--->
+<footer id="contacto">
+    <img src="img/logo-ok.png" alt="Logotipo" class="logo-footer">
+    <p class="eslogan">Tu próximo carro te está esperando</p>
+
+    <p>Contacto: contacto@luisa.com | Tel: 3008883502</p>
+    <p>Horario: Lunes a sábado, 8:00 a.m. a 6:00 p.m.</p>
+
+    <p>Ubicación: Carrera 43A # 7-50, El Poblado, Medellín</p>
+
+<div class="mapa">
+    <iframe
+        src="https://maps.google.com/maps?q=Carrera+43A+7-50+Medellin&output=embed"
+        loading="lazy">
+    </iframe>
+</div>
+    <p>¡Visitanos!</p>
+
+</footer> 
+<script>
+    const boton =document.querySelector('.botonh')
+    const menu = document.querySelector('.contenedormenu')
+
+    boton.addEventListener('click', ()=>{
+    menu.classList.toggle('activo');
+
+    const expandido =menu.classList.contains('activo');
+    boton.setAttribute('aria-expanded', expandido);
+    }); 
+
+</script>
+
+  
+
+    </body>
+
+</html>

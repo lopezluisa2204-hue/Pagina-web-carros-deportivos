@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primario: #c9a24d;
+    --color-acento: #e3c27a;
+    --color-fondo: #f4f4f4;
+    --color-texto: #222222;
+    --color-blanco: #dfd6d6;
+    --color-oscuro: #242323;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+ body {
+    background-color: var(--color-fondo);
+    width: 100%;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color-oscuro);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(66, 63, 63, 0.2);
+}
+
+main {
+    width: 100%;
+}
+
+main> section:nth-of-type(2){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1 fr));
+    gap: 15px;
+}
+article.card {
+    background-color: #eae1e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+article.card h2 {
+    color: #c9a24d;
+    text-align: center;
+}
+
+.imgcard {
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.botonh {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    min-width: 40px;
+    height: 24px;
+    padding: 2px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.botonh .barra {
+    display: block;
+    background-color: #c9a24d;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+} 
+
+.logo,
+.logo img {
+    width: auto;
+    height: 100px;
+}
+
+.menu1 ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu1 ul li {
+    text-align: center;
+    margin: 10px;
+}
+
+.menu1 a {
+    color: var(--color-primario);
+    text-decoration: none;
+    display: block;
+    padding: 8px 18px;
+    border: 1px solid var(--color-primario);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.menu1 a:hover {
+    background-color: var(--color-primario);
+    color: var(--color-oscuro);
+}
+
+/* menu oculto en el celular */
+.contenedormenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-oscuro);
+    z-index: 10;
+}
+
+/* menu visible al tocar las rayitas */
+.contenedormenu.activo {
+    display: block;
+}
+
+/* computador: menu en fila y sin rayitas */
+@media (min-width: 768px) {
+    .botonh {
+        display: none;
+    }
+
+    .contenedormenu {
+        display: block;
+        position: static;
+        width: auto;
+    }
+
+    .menu1 ul {
+        flex-direction: row;
+    }
+}
+
+footer {
+    background-color: var(--color-oscuro);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.logo-footer {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.eslogan {
+    color: #c9a24d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.mapa {
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 200px;
+    border: 2px solid #c9a24d;
+    border-radius: 10px;
+}
+
+.ima_banner{
+    background: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: 0000005c;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    width: 100%;
+    height: 60vh; 
+    align-items: center;
+
+}
+
+.banner h1 {
+    color: #060606;
+    font-family: "Grechen Fuemen", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    text-align: center;
+}
